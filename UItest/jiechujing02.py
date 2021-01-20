@@ -6,9 +6,9 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 #电话弹屏创建警情立案-调派-结案
 options = Options()
-options.add_argument("--kiosk") # 加载启动项页面全屏效果，相当于F11。
+#options.add_argument("--kiosk") # 加载启动项页面全屏效果，相当于F11。
 options.add_experimental_option("excludeSwitches", ['enable-automation']) # 禁止谷歌弹出正在被自动化软件控制消息
-driver = webdriver.Chrome(r"E:\python\chromedriver.exe", 0, options=options,keep_alive=True)
+driver = webdriver.Chrome(r"C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe", 0, options=options,keep_alive=True)
 driver.get("http://192.168.7.7/ers/#/")
 time.sleep(2)
 driver.find_element_by_xpath("//div/div[2]/form/div[1]/div/div[1]/input").send_keys("on_suzhou")
@@ -55,14 +55,16 @@ driver.find_element_by_xpath("//div/div[1]/div/div[2]/div/div[2]/div/div[2]/span
 time.sleep(5)
 driver.find_element_by_xpath("//div[2]/div/div[1]/div/div[2]/div/div[2]/div/div/div[5]/div[1]/span").click()#调派
 time.sleep(6)
-driver.find_element_by_css_selector("li:nth-child(1) > div:nth-child(2) > div > div").click()#选择车辆
+driver.find_element_by_css_selector("#tab-car > div > div.tab-name").click()#车辆调派
 time.sleep(2)
-driver.find_element_by_css_selector("div.dispatch-create-advice > div > span").click()#立即下达
+driver.find_element_by_css_selector("#pane-car > div > div.kircp-empty-wrap > div > ul > li > div:nth-child(2) > div").click()#第一个车
+time.sleep(2)
+driver.find_element_by_xpath("//div[2]/div/div/div/div[2]/div/span").click()#立即下达
 time.sleep(5)
-driver.find_element_by_xpath("//div/div[2]/div/div/div[4]/div[1]/div[2]").click()#状态编辑
+driver.find_element_by_xpath("//div[2]/div/div[2]/div/div/div[4]/div[1]/div[2]").click()#状态编辑
 time.sleep(2)
 driver.find_element_by_id("select").click()#点击警情状态流转框
 time.sleep(5)
-driver.find_element_by_xpath("/html/body/div[3]/div/div[1]/ul/li[11]").click()#结案
+driver.find_element_by_xpath("/html/body/div[last()]/div/div[1]/ul/li[11]").click()
 time.sleep(2)
 driver.quit()
