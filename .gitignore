@@ -1,0 +1,4 @@
+venv
+selenium
+__pycache__
+*.spec

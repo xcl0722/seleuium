@@ -1,0 +1,11 @@
+#数据库与卡夫卡
+mysql:
+  hostname: 10.65.3.25
+  user: kircp
+  password: kircp!@6oA~h
+  database: kircp
+  port: 3306
+  querySql: SELECT a.id, a.jgbh, a.cphm, b.xzqhbh, b.jd, b.wd FROM ers_clxx a LEFT JOIN( SELECT id, jgbh, xzqhbh, jd, wd FROM ers_jgxx) b ON b.jgbh = a.jgbh WHERE b.jd IS NOT NULL and a.cphm ='苏GHU876'
+kafka: 
+  bootstrap_servers: 10.65.3.30:19092
+  car_topic: device-notify-kircp
