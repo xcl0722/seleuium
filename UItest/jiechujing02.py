@@ -4,7 +4,7 @@ import paramiko
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
-
+#电话弹屏创建警情立案-调派-结案
 options = Options()
 options.add_argument("--kiosk") # 加载启动项页面全屏效果，相当于F11。
 options.add_experimental_option("excludeSwitches", ['enable-automation']) # 禁止谷歌弹出正在被自动化软件控制消息
