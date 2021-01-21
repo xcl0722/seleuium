@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 options = Options()
 options.add_argument("--kiosk") # 加载启动项页面全屏效果，相当于F11。
 options.add_experimental_option("excludeSwitches", ['enable-automation']) # 禁止谷歌弹出正在被自动化软件控制消息
-driver = webdriver.Chrome(r"C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe", 0, options=options,keep_alive=True)
+driver = webdriver.Chrome(r"E:\python\chromedriver.exe", 0, options=options,keep_alive=True)
 driver.get("http://192.168.7.7/ers/#/")
 time.sleep(1)
 driver.find_element_by_xpath("//div/div[2]/form/div[1]/div/div[1]/input").send_keys("on_suzhou")
