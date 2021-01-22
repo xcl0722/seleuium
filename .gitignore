@@ -1,4 +1,5 @@
 venv
+test_code
 selenium
 __pycache__
 *.spec

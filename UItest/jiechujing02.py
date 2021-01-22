@@ -46,17 +46,19 @@ driver.find_element_by_xpath("//div[1]/div/div[2]/div/form/div[11]/div/div[1]/in
 time.sleep(3)
 driver.find_element_by_css_selector("body > ul > li:nth-child(2)").click()#选择有经纬度的地址
 time.sleep(4)
+driver.find_element_by_xpath("//div/div[2]/div/div[2]/div/div[1]/div/div[2]/div/form/div[13]/div/span[2]").click()#警情等级选择2级
+time.sleep(3)
 driver.find_element_by_xpath("//div/div[1]/div/div[2]/div/form/div[14]/div/div/span").click()#案件描述自动生成
-time.sleep(5)
-driver.find_element_by_xpath("//div/div[2]/div/div[2]/div/div[1]/div/div[2]/div/form/div[13]/div/span[2]").click()
 time.sleep(5)
 driver.find_element_by_xpath("//div/div[1]/div/div[2]/div/div[2]/div/div[2]/span").click()#立案
 time.sleep(5)
-driver.find_element_by_xpath("//div[2]/div/div[1]/div/div[2]/div/div[2]/div/div/div[5]/div[1]/span").click()#调派
-time.sleep(6)
-driver.find_element_by_css_selector("#tab-car > div > div.tab-name").click()#车辆调派
-time.sleep(2)
-driver.find_element_by_css_selector("#pane-car > div > div.kircp-empty-wrap > div > ul > li > div:nth-child(2) > div").click()#第一个车
+driver.find_element_by_xpath("//div[1]/div/div[3]/div[2]/span[4]").click()#调派
+time.sleep(3)
+driver.find_element_by_css_selector("#tab-custom > div > div.tab-name").click()#自定义调派
+time.sleep(3)
+driver.find_element_by_css_selector("#pane-custom > div > label > span.kc-checkbox__input > span").click()#只显示可用车辆
+time.sleep(3)
+driver.find_element_by_xpath("//div/div[2]/div/ul[2]/li[1]/div[1]/div").click()#选择车辆
 time.sleep(2)
 driver.find_element_by_xpath("//div[2]/div/div/div/div[2]/div/span").click()#立即下达
 time.sleep(5)
