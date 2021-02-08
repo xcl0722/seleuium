@@ -18,14 +18,22 @@ driver.maximize_window()
 time.sleep(3)
 driver.find_element_by_xpath("//div/div[1]/div/div/ul/li[2]/span[2]").click()#切换到处警Tab
 time.sleep(3)
-driver.find_element_by_xpath("//div[2]/div/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[2]").click()#更多查询
-time.sleep(3)
-driver.find_element_by_xpath("//form/div[3]/div/div/div/div/span/span/i").click()#点击下拉箭头
-time.sleep(5)
-driver.find_element_by_css_selector("li.kc-select-dropdown__item.hover").click()#筛选下达状态
-time.sleep(3)
-driver.switch_to.window(all_handles[-1])
+driver.switch_to.window(all_handles[1])#切换到地图屏
 driver.maximize_window()
+time.sleep(10)
+# driver.find_element_by_xpath("//div[2]/div/div/div[2]/div/div[1]/div").click()#点击一下第一个警情
+# time.sleep(3)
+# driver.find_element_by_xpath("//div[2]/div/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div/div[2]").click()#更多查询
+# time.sleep(3)
+# driver.find_element_by_xpath("//form/div[3]/div/div/div/div/span/span/i").click()#点击下拉箭头
+# time.sleep(7)
+# driver.find_element_by_css_selector("/html/body/div[2]/div/div[1]/ul/li[4]").click()#筛选下达状态
+# time.sleep(3)
+#driver.switch_to.window(all_handles[1])#切换到地图屏
+# driver.find_element_by_css_selector("div.slotbox > div > div:nth-child(2)").click()#切换到地图屏
+# driver.maximize_window()
+# time.sleep(10)
+driver.find_element_by_xpath("//div/div[2]/ul/li[2]/div/div/ul/li[2]").click()#查看属地资源
 time.sleep(3)
 driver.find_element_by_xpath("//div[1]/div/div[4]/ul/li[2]/div[2]").click()#查看微型消防站信息
 time.sleep(3)
@@ -43,10 +51,15 @@ time.sleep(5)
 #展开地图屏右侧工具栏
 driver.find_element_by_xpath("//div/div[2]/div/div[1]/div/div[7]/div[1]").click()
 time.sleep(3)
+driver.find_element_by_css_selector("div > div.weather-header").click()#查看天气信息
+time.sleep(3)
+#关闭天气详情弹窗
+driver.find_element_by_xpath("/html/body/div[2]/div/div[2]/div/div[1]/div").click()
+time.sleep(3)
 #查看周边资源
 driver.find_element_by_xpath("//div[3]/div[2]/div/div[2]/ul/li[2]/div/div/ul/li[1]").click()
 time.sleep(4)
 #切换战备值守模式
-driver.find_element_by_xpath("").click("//div[2]/div/div[1]/div/div[6]/ul/li[1]")
+driver.find_element_by_xpath("//div/div[2]/ul/li[2]/div/div/ul/li[2]").click()
 time.sleep(3)
 driver.quit()
