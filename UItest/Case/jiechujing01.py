@@ -33,11 +33,11 @@ driver.find_element_by_xpath("//form/div[6]/div[1]/div/div/div/div/span/span").c
 time.sleep(5)
 driver.find_element_by_xpath("/html/body/div[last()]/div/div[1]/ul/li[1]").click()#火灾扑救
 time.sleep(3)
-driver.find_element_by_xpath("//div[6]/div[2]/div/div/div/div[1]/span/span/i").click()#下拉
+driver.find_element_by_xpath("//div/form/div[6]/div[2]/div/div/div/div[1]/span/span/i").click()#下拉
 time.sleep(2)
-driver.find_element_by_xpath("//div/div[1]/ul/div/div[1]/div[1]/div[1]/div/div/span[2]").click()#易燃易爆
+driver.find_element_by_xpath("//div/div/div/div[2]/div/div[1]/ul/div/div[1]/div/span[2]").click()#易燃易爆
 time.sleep(3)
-driver.find_element_by_xpath("//div/form/div[7]/div/div/div").click()#案件描述自动生成
+driver.find_element_by_xpath("//div/div[1]/div/div[2]/div/form/div[7]/div/div/div/span").click()#案件描述自动生成
 time.sleep(3)
 driver.find_element_by_css_selector("//div/div[2]/div/div[2]/div/div[3]/span").click()#预调派
 time.sleep(3)
