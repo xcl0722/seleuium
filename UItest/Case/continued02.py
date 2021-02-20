@@ -28,13 +28,13 @@ while (i < 100000000):
           "/html/body/div[1]/div/div[2]/div/div[2]/div/div[2]/div/div[1]/div/div[2]/div/form/div[4]/div/div/div/div[1]/div[1]/div[2]/div[1]/div[1]/ul").click()  # 选择有经纬度的地址
       time.sleep(5)
       driver.find_element_by_xpath("//form/div[6]/div[1]/div/div/div/div/span/span").click()  # 下拉
-      time.sleep(6)
+      time.sleep(8)
       driver.find_element_by_xpath("/html/body/div[last()]/div/div[1]/ul/li[1]").click()  # 火灾扑救
-      time.sleep(6)
+      time.sleep(10)
       driver.find_element_by_xpath("//div/form/div[6]/div[2]/div/div/div/div[1]/span/span/i").click()  # 下拉
-      time.sleep(5)
+      time.sleep(8)
       driver.find_element_by_xpath("//div/div/div/div[2]/div/div[1]/ul/div/div[1]/div/span[2]").click()  # 易燃易爆
-      time.sleep(5)
+      time.sleep(8)
       driver.find_element_by_xpath("//div/div[1]/div/div[2]/div/form/div[7]/div/div/div/span").click()  # 案件描述自动生成
       time.sleep(5)
       driver.find_element_by_xpath("/html/body/div[1]/div/div[2]/div/div[2]/div/div[2]/div/div[1]/div/div[2]/div/div[2]/div/div[1]/span").click() # 立案
