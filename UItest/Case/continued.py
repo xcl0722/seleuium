@@ -6,9 +6,9 @@ from selenium.webdriver.chrome.options import Options
 options = Options()
 options.add_experimental_option("excludeSwitches", ['enable-automation']) # 禁止谷歌弹出正在被自动化软件控制消息
 driver = webdriver.Chrome(r"E:\python\chromedriver.exe", 0, options=options,keep_alive=True)
-driver.get("https://dolphin-dev.kedacom.com/ers-web/#/")
+driver.get("http://10.20.66.9/ers-web/#/")
 time.sleep(1)
-driver.find_element_by_xpath("//div/div[2]/form/div[1]/div/div[1]/input").send_keys("poc-xcl")
+driver.find_element_by_xpath("//div/div[2]/form/div[1]/div/div[1]/input").send_keys("ers-xcl")
 driver.find_element_by_xpath("//div/div[2]/form/div[2]/div/div[1]/input").send_keys("000000")
 driver.find_element_by_css_selector("#keybtn").click()
 time.sleep(8)
